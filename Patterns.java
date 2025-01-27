@@ -16,6 +16,7 @@ public class Patterns {
         int n=5;
 
 
+
         for (int i = 1; i <2*n; i++) {
             int stars=(i>5) ? (2*n-i) : i;
             for (int j = 1; j <=stars ; j++) {
@@ -95,32 +96,53 @@ public class Patterns {
 
 //                                                       pattern 10
 
-        for (int i = 0; i <n ; i++) {
-            for (int j = 1; j <=n+i ; j++) {
-                if(j>=n-i){
-                    if(i%2==0){
-                        if(j%2==1){
-                            System.out.print("*");
-                        }
-                        else{
-                            System.out.print(" ");
-                        }
+//        for (int i = 0; i <n ; i++) {
+//            for (int j = 1; j <=n+i ; j++) {
+//                if(j>=n-i){
+//                    if(i%2==0){
+//                        if(j%2==1){
+//                            System.out.print("*");
+//                        }
+//                        else{
+//                            System.out.print(" ");
+//                        }
+//
+//                    }else {
+//                        if(j%2==0){
+//                            System.out.print("*");
+//                        }
+//                        else {
+//                            System.out.print(" ");
+//                        }
+//
+//                    }
+//
+//                }
+//                else{
+//                    System.out.print(" ");
+//                }
+//            }
+//            System.out.println();
+//        }
 
-                    }else {
-                        if(j%2==0){
-                            System.out.print("*");
-                        }
-                        else {
-                            System.out.print(" ");
-                        }
 
-                    }
+        // better way of printing pattern 10:-
 
-                }
-                else{
+        for (int i = 1; i <= n; i++) {
+            // Print spaces before stars
+            for (int j = 1; j <= n- i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars with spaces between them, but no space after last star
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+                // Add space only if it's not the last star of the line
+                if (k < i) {
                     System.out.print(" ");
                 }
             }
+
             System.out.println();
         }
 
