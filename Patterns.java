@@ -95,7 +95,7 @@ public class Patterns {
 
 
 //                                                       pattern 10
-
+//
 //        for (int i = 0; i <n ; i++) {
 //            for (int j = 1; j <=n+i ; j++) {
 //                if(j>=n-i){
@@ -124,7 +124,7 @@ public class Patterns {
 //            }
 //            System.out.println();
 //        }
-
+//
 
         // better way of printing pattern 10:-
 
@@ -188,7 +188,42 @@ public class Patterns {
 
 //                                                   PATTERN 13
 
+        for (int i = 0; i <n-1 ; i++) {
 
+            for (int j = 1; j <=n+i ; j++) {
+
+                    if(j==n-i || j==n+i){
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+
+            }
+            System.out.println();
+        }
+        for (int k = 1; k <=9 ; k++) {
+            System.out.print("*");
+        }
+
+
+//                                        PATTERN 14
+
+        int m=4;
+
+        for (int i = 1; i <=9 ; i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+        for (int i = 0; i <m ; i++) {
+            for (int j = 1; j <=2*m-i ; j++) {
+                if(j==i+2 || j==2*m-i){
+                    System.out.print("*");
+                } else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
 
     }
 }
